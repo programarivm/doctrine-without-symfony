@@ -1,0 +1,28 @@
+{
+  "name": "programarivm/doctrine-without-symfony",
+  "description": "Another blog. This is Doctrine without Symfony, or a standalone Doctrine app if you like.",
+  "authors": [
+    {
+      "name": "Jordi Bassagañas",
+      "email": "jordi_bassa_gal@hotmail.com",
+      "homepage": "https://programarivm.com"
+    }
+  ],
+  "require": {
+    "doctrine/orm": "*",
+    "vlucas/phpdotenv": "^2.4"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~5.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "AnotherBlog\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "AnotherBlog\\Tests\\": "tests/"
+    }
+  }
+}

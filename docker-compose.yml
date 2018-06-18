@@ -1,0 +1,16 @@
+another_blog:
+    build: .
+    links:
+        - mysql
+    tty: true
+    working_dir: /another-blog
+    volumes:
+        - ./:/another-blog
+    restart: always
+mysql:
+    image: mysql:5.7
+    environment:
+        - DB_HOST=mysql
+        - MYSQL_ROOT_PASSWORD=my-secret-pw
+        - MYSQL_DATABASE=another_blog
+    restart: always
