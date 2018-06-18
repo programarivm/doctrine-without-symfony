@@ -11,6 +11,6 @@ mysql:
     image: mysql:5.7
     environment:
         - DB_HOST=mysql
-        - MYSQL_ROOT_PASSWORD=my-secret-pw
+        - MYSQL_ROOT_PASSWORD=password
         - MYSQL_DATABASE=another_blog
     restart: always

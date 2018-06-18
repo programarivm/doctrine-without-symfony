@@ -2,7 +2,7 @@
 
 This is Doctrine without Symfony, or a standalone Doctrine app if you like -- another blog in the form of a few PHP CLI examples with Docker.
 
-### 1. Create the `.env` File
+### Create the `.env` File
 
 First things first, create the following `.env` file in the app's root folder.
 
@@ -11,16 +11,23 @@ First things first, create the following `.env` file in the app's root folder.
     DB_HOST=mysql
     DB_PORT=3306
     DB_DATABASE=another_blog
-    DB_USERNAME=another_blog
-    DB_PASSWORD=secret
-    MYSQL_ROOT_PASSWORD=secret
+    DB_USERNAME=root
+    DB_PASSWORD=password
 
-### 2. Install Dependencies
+### Install Dependencies
 
 Via composer:
 
     $ composer install
 
-### 3. Start the Docker Services
+### Start the Docker Services
 
     docker-compose up --build
+
+### SSH the Blog Container
+
+    sudo docker exec -it <container name> /bin/bash
+
+### Create the Database Schema
+
+    php vendor/bin/doctrine orm:schema-tool:create
