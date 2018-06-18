@@ -14,7 +14,6 @@ namespace App\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\PostRepository")
@@ -54,7 +53,6 @@ class Post
      * @var string
      *
      * @ORM\Column(type="string")
-     * @Assert\NotBlank
      */
     private $title;
 
@@ -69,7 +67,6 @@ class Post
      * @var string
      *
      * @ORM\Column(type="string")
-     * @Assert\NotBlank(message="post.blank_summary")
      */
     private $summary;
 
@@ -77,8 +74,6 @@ class Post
      * @var string
      *
      * @ORM\Column(type="text")
-     * @Assert\NotBlank(message="post.blank_content")
-     * @Assert\Length(min=10, minMessage="post.too_short_content")
      */
     private $content;
 
@@ -86,7 +81,6 @@ class Post
      * @var \DateTime
      *
      * @ORM\Column(type="datetime")
-     * @Assert\DateTime
      */
     private $publishedAt;
 
@@ -117,7 +111,6 @@ class Post
      * @ORM\ManyToMany(targetEntity="App\Entity\Tag", cascade={"persist"})
      * @ORM\JoinTable(name="symfony_demo_post_tag")
      * @ORM\OrderBy({"name": "ASC"})
-     * @Assert\Count(max="4", maxMessage="post.too_many_tags")
      */
     private $tags;
 

@@ -1,6 +1,6 @@
 {
   "name": "programarivm/doctrine-without-symfony",
-  "description": "This is Doctrine without Symfony, or a standalone Doctrine app if you like. Another blog in the form of a few PHP CLI examples with Docker.",
+  "description": "This is Doctrine without Symfony, or a standalone Doctrine app if you like -- another blog in the form of a few PHP CLI examples with Docker.",
   "authors": [
     {
       "name": "Jordi Bassagañas",

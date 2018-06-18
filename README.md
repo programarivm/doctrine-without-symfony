@@ -1,6 +1,6 @@
 ## Doctrine without Symfony
 
-This is Doctrine without Symfony, or a standalone Doctrine app if you like. Another blog in the form of a few PHP CLI examples with Docker.
+This is Doctrine without Symfony, or a standalone Doctrine app if you like -- another blog in the form of a few PHP CLI examples with Docker.
 
 ### 1. Create the `.env` File
 
