@@ -24,14 +24,18 @@ Via composer:
 
     docker-compose up --build
 
-### SSH the Another Blog Container
+### Run the PHP CLI Examples
+
+SSH the blog container:
 
     sudo docker exec -it <container name> /bin/bash
 
-### Create the Database Schema
+Create the database schema:
 
     php vendor/bin/doctrine orm:schema-tool:create
 
-### Run the examples
+Run the examples:
 
-    php examples/01-create-user.php
+    php examples/01-create-users.php
+    php examples/02-write-post.php
+    php examples/03-comment-post.php

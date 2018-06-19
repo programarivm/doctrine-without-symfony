@@ -94,20 +94,10 @@ class Post
      */
     private $comments;
 
-    /**
-     * @var Tag[]|ArrayCollection
-     *
-     * @ORM\ManyToMany(targetEntity="AnotherBlog\Entity\Tag", cascade={"persist"})
-     * @ORM\JoinTable(name="demo_post_tag")
-     * @ORM\OrderBy({"name": "ASC"})
-     */
-    private $tags;
-
     public function __construct()
     {
         $this->publishedAt = new \DateTime();
         $this->comments = new ArrayCollection();
-        $this->tags = new ArrayCollection();
     }
 
     public function getId(): int
@@ -192,24 +182,5 @@ class Post
     public function setSummary(?string $summary): void
     {
         $this->summary = $summary;
-    }
-
-    public function addTag(?Tag ...$tags): void
-    {
-        foreach ($tags as $tag) {
-            if (!$this->tags->contains($tag)) {
-                $this->tags->add($tag);
-            }
-        }
-    }
-
-    public function removeTag(Tag $tag): void
-    {
-        $this->tags->removeElement($tag);
-    }
-
-    public function getTags(): Collection
-    {
-        return $this->tags;
     }
 }
