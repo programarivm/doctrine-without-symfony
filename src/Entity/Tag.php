@@ -14,14 +14,8 @@ namespace AnotherBlog\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity()
- * @ORM\Table(name="symfony_demo_tag")
- *
- * Defines the properties of the Tag entity to represent the post tags.
- *
- * See https://symfony.com/doc/current/book/doctrine.html#creating-an-entity-class
- *
- * @author Yonel Ceruto <yonelceruto@gmail.com>
+ * @ORM\Entity
+ * @ORM\Table(name="demo_tag")
  */
 class Tag implements \JsonSerializable
 {
