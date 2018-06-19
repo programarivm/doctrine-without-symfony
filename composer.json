@@ -19,10 +19,5 @@
     "psr-4": {
       "AnotherBlog\\": "src/"
     }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "AnotherBlog\\Tests\\": "tests/"
-    }
   }
 }
