@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace App\Entity;
+namespace AnotherBlog\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -62,7 +62,7 @@ class Comment
     /**
      * @var User
      *
-     * @ORM\ManyToOne(targetEntity="App\Entity\User")
+     * @ORM\ManyToOne(targetEntity="AnotherBlog\Entity\User")
      * @ORM\JoinColumn(nullable=false)
      */
     private $author;

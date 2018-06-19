@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace App\Entity;
+namespace AnotherBlog\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
